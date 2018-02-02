@@ -39,6 +39,11 @@ restService.post('/foodCorner', function(req, res) {
 				source: 'webhook-foodcorner'
 			}
 		}
+		responseJson = {
+				speech: "We've chocolate, Strowberry, Vanilla and Mango available",
+				displayText: "We've chocolate, Strowberry, Vanilla and Mango available",
+				source: 'webhook-foodcorner'
+			}
 		return res.json(responseJson);
 	}else{ 
 		return res.json({
