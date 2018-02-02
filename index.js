@@ -13,45 +13,13 @@ restService.use(bodyParser.json());
 
 restService.post('/foodCorner', function(req, res) {
 	var responseJson;
-	if(req.body.result && req.body.result.parameters){
-		var params = req.body.result.parameters;
-		var choices = params.choices;
-		var quantity = params.quantity;
-		var type = params.type;
-		var flavors = params.flavors;
-		var paymentType = params.paymentType;
-		if(choices){
-			responseJson = {
-				speech: "We've chocolate, Strowberry, Vanilla and Mango available",
-				displayText: "We've chocolate, Strowberry, Vanilla and Mango available",
-				source: 'webhook-foodcorner'
-			}
-		}else if(quantity && type){
-			responseJson = {
-				speech: "You've ordered" + quantity + " " + type + " " + flavors + ". How would you like to pay? Card or Net Banking",
-				displayText: "You've ordered" + quantity + " " + type + " " + flavors + ". How would you like to pay? Card or Net Banking",
-				source: 'webhook-foodcorner'
-			}
-		}else if(paymentType){
-			responseJson = {
-				speech: "You've successfully placed order. Enjoy your icecream",
-				displayText: "You've successfully placed order. Enjoy your icecream",
-				source: 'webhook-foodcorner'
-			}
-		}
-		responseJson = {
-				speech: "We've chocolate, Strowberry, Vanilla and Mango available",
-				displayText: "We've chocolate, Strowberry, Vanilla and Mango available",
-				source: 'webhook-foodcorner'
-			}
-		return res.json(responseJson);
-	}else{ 
-		return res.json({
+
+	
+	return res.json({
 			speech: "I didn't get that. Please say it again",
 			displayText: "I didn't get that. Please say it again",
 			source: 'webhook-foodcorner'
 		});
-	}
 });
 
     var slack_message = {
