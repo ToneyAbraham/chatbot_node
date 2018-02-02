@@ -22,6 +22,7 @@ restService.post('/foodCorner', function(req, res) {
 		});
 });
 
+restService.post('/slack-test', function(req, res) {
     var slack_message = {
         "text": "Details of JIRA board for Browse and Commerce",
         "attachments": [{
