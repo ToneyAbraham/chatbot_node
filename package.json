@@ -1,0 +1,14 @@
+{
+  "name": "webhook-foodcorner",
+  "version": "1.0.0",
+  "description": "Webhook food helper sample",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Toney Abraham",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4"
+  }
+}
