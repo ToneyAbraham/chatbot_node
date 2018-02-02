@@ -20,7 +20,7 @@ restService.post('/foodCorner', function(req, res) {
 		var type = params.type;
 		var flavors = params.flavors;
 		var paymentType = params.paymentType;
-		console.log("logging params " + choices + " : " + quantity + " : " + type + " : " + flavors);
+		console.log("logging params " + choices + " : " + quantity + " : " + type + " : " + flavors + " : " + paymentType);
 		if(choices){
 			responseJson = {
 				speech: "We've chocolate, Strowberry, Vanilla and Mango available",
