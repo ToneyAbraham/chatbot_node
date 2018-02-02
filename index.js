@@ -27,7 +27,7 @@ restService.post('/foodCorner', function(req, res) {
 				displayText: "We've chocolate, Strowberry, Vanilla and Mango available",
 				source: 'webhook-foodcorner'
 			}
-		}else if(quantity && type){
+		}else if(quantity && type && flavors){
 			responseJson = {
 				speech: "You've ordered" + quantity + " " + type + " " + flavors + ". How would you like to pay? Card or Net Banking",
 				displayText: "You've ordered" + quantity + " " + type + " " + flavors + ". How would you like to pay? Card or Net Banking",
